@@ -1,0 +1,12 @@
+﻿<Window x:Class="Examen1DeAplicada1.UI.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Examen1DeAplicada1.UI"
+        mc:Ignorable="d"
+        Title="Informacion Del Sistema" Height="450" Width="800">
+    <Grid>
+        <Label Margin="10,100,10,227" FontSize="50" Content="Creado Por Mario Peña"></Label>
+    </Grid>
+</Window>

@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Examen1DeAplicada1.UI"
         mc:Ignorable=" d"
         
-        Title="REGISTRO ARTICULO" Height="750" Width="500">
-    <Grid Height="790" Width="500" VerticalAlignment="Top">
+        Title="REGISTRO ARTICULO" Height="750" Width="550">
+    <Grid Height="790" VerticalAlignment="Top">
 
         <StackPanel  Margin="0,10,0,749" Orientation="Vertical"   HorizontalAlignment="Left" >
             <Label  x:Name="productoIdlabel" HorizontalAlignment="Left" FontSize="20" Content="Articulo Id" Margin="20,0"/>
@@ -18,41 +18,38 @@
             <TextBox  x:Name="productoIdTextBox" HorizontalAlignment="Left" Text="{Binding productoId}" Margin="20,0" FontSize="20"  Width="309" Height="50"  />
             <Button  Width="117" Height="50">
                 <StackPanel Orientation="Horizontal" Margin="5,0">
-                    <Image Source="Resources\agregar.png" Width="47" Height="43"/>
+                    <Image Source="Resources\agregar.png" Width="33" Height="44" />
                     <Label Content="Buscar"  />
                 </StackPanel>
             </Button>
 
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" Margin="0,107,0,590" HorizontalAlignment="Center" Width="500">
+        <StackPanel Orientation="Vertical" Margin="0,107,0,590" HorizontalAlignment="Left" Width="556">
             <Label  x:Name="descripcionlabel" HorizontalAlignment="Left" Margin="20,0" FontSize="20" Content="Descripcion" />
             <TextBox  x:Name="descripcionTextBox" HorizontalAlignment="Left" Margin="20,0"  Text="{Binding descripcion}" FontSize="20" Height="50" Width="452" />
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" Margin="-3,215,0,452" HorizontalAlignment="Left" Width="503">
+        <StackPanel Orientation="Vertical" Margin="0,216,0,451" HorizontalAlignment="Left" Width="503">
             <Label  x:Name="existencialabel" HorizontalAlignment="Left" Margin="20,0" FontSize="20" Content="Existencia" Width="105" Height="50"/>
-            <ComboBox Name="existenciaComboBox" HorizontalAlignment="Left"  Text="{Binding existencia}" Height="50" Width="452" FontSize="20" Margin="20,0"  >
-                <ComboBoxItem IsSelected="True" Content="si" FontSize="20" />
-                <ComboBoxItem IsSelected="False" Content="no" FontSize="20"/>
-            </ComboBox>
+            <TextBox  x:Name="existenciaTextBox" HorizontalAlignment="Left" Text="{Binding existencia}" FontSize="20" Margin="20,0" Height="50" Width="452"  />
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" Margin="-2,348,0,321" HorizontalAlignment="Left" Width="500">
+        <StackPanel Orientation="Vertical" Margin="0,348,0,321" HorizontalAlignment="Left" Width="500">
             <Label  x:Name="costolabel" HorizontalAlignment="Left" FontSize="20" Margin="20,0" Content="Costo" Width="220" Height="50"/>
             <TextBox  x:Name="costoTextBox" HorizontalAlignment="Left" Text="{Binding costo}" FontSize="20" Margin="20,0" Height="50" Width="452"  />
         </StackPanel>
 
-        <StackPanel  Orientation="Vertical"  HorizontalAlignment="Center" Width="500" Margin="0,484,0,204">
+        <StackPanel  Orientation="Vertical"  HorizontalAlignment="Center" Width="550" Margin="0,484,0,204">
             <Label  x:Name="valorinventariolabel" HorizontalAlignment="Left" FontSize="20" Content="Valor inventario" Width="220" Height="50" Margin="20,0"/>
             <TextBox  x:Name="valorinventarioTextBox" HorizontalAlignment="Left" Text="{Binding valorInventario}" FontSize="20"  Height="50" Width="452" Margin="20,0" />
         </StackPanel>
 
-        <StackPanel HorizontalAlignment="Center" Margin="0,601,0,106" Orientation="Horizontal" Width="506" >
-            <Button x:Name="NuevoBoton" Content="Nuevo" Margin="20,0"  HorizontalAlignment="Center"   FontSize="30"  Width="119" Height="50" />
-            <Button x:Name="GuardarBoton" Content="Guardar" Margin="20,0" HorizontalAlignment="Center"  FontSize="30"  Width="128" Height="50" />
-            <Button x:Name="EliminarBoton" Content="Eliminar" Margin="20,0"  HorizontalAlignment="Center" FontSize="30"  Width="128" Height="50"/>
-
+        <StackPanel HorizontalAlignment="Center" Margin="0,601,0,106" Orientation="Horizontal" Width="550" >
+            <Button x:Name="NuevoBoton" Content="Nuevo" Margin="5,0"  HorizontalAlignment="Center"   FontSize="20"  Width="119" Height="50" Click="NuevoBoton_Click" />
+            <Button x:Name="GuardarBoton" Content="Guardar" Margin="5,0" HorizontalAlignment="Center"  FontSize="20"  Width="128" Height="50" />
+            <Button x:Name="EliminarBoton" Content="Eliminar" Margin="5,0"  HorizontalAlignment="Center" FontSize="20"  Width="128" Height="50"/>
+            <Button x:Name="ValidarBoton" Content="Validar" Margin="5,0"  HorizontalAlignment="Center" FontSize="20"  Width="128" Height="50" Click="ValidarBoton_Click"/>
 
         </StackPanel>
 

@@ -37,6 +37,12 @@ namespace Examen1DeAplicada1
             ventana.Show();
         }
 
+        private void Informacion_Click(object sender, RoutedEventArgs e)
+        {
+            Info informacion = new Info();
+            informacion.Show();
+        }
+
 
         /*
                 private void NuevoBoton_Click(object sender, RoutedEventArgs e)

@@ -10,9 +10,9 @@ namespace Examen1DeAplicada1.Entidades
         [Key]
         public int productoId { get; set; }
         public string descripcion  { get; set; }
-        public string existencia  { get; set; }
+        public double existencia  { get; set; }
         public double costo { get; set; }
-        public int valorInventario { get; set; }
+        public double valorInventario { get; set; }
          
     }
 }

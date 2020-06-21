@@ -2,6 +2,7 @@
 using Examen1DeAplicada1.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Examen1DeAplicada1.Bll
@@ -74,5 +75,11 @@ namespace Examen1DeAplicada1.Bll
 			}	
 		}
 
-    }
+		public static double Inventario(Articulos articulo)
+		{
+			return articulo.costo * articulo.existencia; 
+				
+		}
+
+	}
 }

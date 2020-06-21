@@ -6,17 +6,31 @@
         xmlns:local="clr-namespace:Examen1DeAplicada1"
         mc:Ignorable="d"
    
-        Title="Regsitro" Height="600" Width="500" >
-    <Grid Margin="0,0,0,155">
+        Title="Regsitro" Height="500" Width="500" >
+    <Grid Height="500" Width="500">
 
-        <StackPanel Orientation="Vertical"   Margin="0.15">
-            <Button x:Name="ventana"  Margin="5,0" Click="ventana_Click">
-                <StackPanel Orientation="Horizontal" Margin="5,0">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,454" Width="500" >
+            
+            <Button x:Name="ventana"  Margin="10,0" Click="ventana_Click" Width="146">
+                <StackPanel Orientation="Horizontal" >
                     <Image Source="Resources\agregar.png" />
-                    <Label Content="Buscar" />
+                    <Label Content="Registro" />
                 </StackPanel>
             </Button>
+
+            <Button x:Name="Informacion"  Margin="0,0"  Width="145" Click="Informacion_Click">
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <Image Source="Resources\agregar.png" />
+                    <Label Content="Informacion" />
+                </StackPanel>
+            </Button>
+
         </StackPanel>
 
+        <StackPanel Margin="0,247,0,89">
+
+            <Label Margin="0,0" FontSize="25" HorizontalAlignment="Center" Content="Bienvenido a Su Sistema De Registro" FontStyle="Oblique" ></Label>
+
+        </StackPanel>
     </Grid>
 </Window>
