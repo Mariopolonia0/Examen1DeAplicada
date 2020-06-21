@@ -13,9 +13,9 @@ namespace Examen1DeAplicada1.Migrations
                     productoId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     descripcion = table.Column<string>(nullable: true),
-                    existencia = table.Column<string>(nullable: true),
+                    existencia = table.Column<double>(nullable: false),
                     costo = table.Column<double>(nullable: false),
-                    valorInventario = table.Column<int>(nullable: false)
+                    valorInventario = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {

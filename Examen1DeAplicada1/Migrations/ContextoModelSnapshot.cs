@@ -27,11 +27,11 @@ namespace Examen1DeAplicada1.Migrations
                     b.Property<string>("descripcion")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("existencia")
-                        .HasColumnType("TEXT");
+                    b.Property<double>("existencia")
+                        .HasColumnType("REAL");
 
-                    b.Property<int>("valorInventario")
-                        .HasColumnType("INTEGER");
+                    b.Property<double>("valorInventario")
+                        .HasColumnType("REAL");
 
                     b.HasKey("productoId");
 

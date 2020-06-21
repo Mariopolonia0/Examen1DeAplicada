@@ -24,6 +24,9 @@ namespace Examen1DeAplicada1.UI
         {
             InitializeComponent();
             this.DataContext = articulo;
+            articulo.existencia = 0;
+            articulo.costo = 0;
+            
         }
 
         private void NuevoBoton_Click(object sender, RoutedEventArgs e)
@@ -31,15 +34,6 @@ namespace Examen1DeAplicada1.UI
             this.articulo = new Articulos();
             this.DataContext = articulo;
         }
-
-        private void ValidarBoton_Click(object sender, RoutedEventArgs e)
-        {
-            
-            if(validar())
-                valorinventarioTextBox.Text = rArticulos.Inventario(articulo).ToString();
-           
-        }
-
 
         private bool validar()
         {
@@ -65,6 +59,19 @@ namespace Examen1DeAplicada1.UI
             }
 
             return  true;
+        }
+  
+
+        private void existenciaTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //articulo.valorInventario = rArticulos.Inventario(articulo);
+            valorinventarioTextBox.Text = rArticulos.Inventario(articulo).ToString();
+        }
+
+
+        private void costoTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            valorinventarioTextBox.Text = rArticulos.Inventario(articulo).ToString();
         }
     }
 }

@@ -32,24 +32,24 @@
 
         <StackPanel Orientation="Vertical" Margin="0,216,0,451" HorizontalAlignment="Left" Width="503">
             <Label  x:Name="existencialabel" HorizontalAlignment="Left" Margin="20,0" FontSize="20" Content="Existencia" Width="105" Height="50"/>
-            <TextBox  x:Name="existenciaTextBox" HorizontalAlignment="Left" Text="{Binding existencia}" FontSize="20" Margin="20,0" Height="50" Width="452"  />
+            <TextBox  x:Name="existenciaTextBox" HorizontalAlignment="Left" Text="{Binding existencia}" FontSize="20" Margin="20,0" Height="50" Width="452" TextChanged="existenciaTextBox_TextChanged"  />
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="0,348,0,321" HorizontalAlignment="Left" Width="500">
             <Label  x:Name="costolabel" HorizontalAlignment="Left" FontSize="20" Margin="20,0" Content="Costo" Width="220" Height="50"/>
-            <TextBox  x:Name="costoTextBox" HorizontalAlignment="Left" Text="{Binding costo}" FontSize="20" Margin="20,0" Height="50" Width="452"  />
+            <TextBox  x:Name="costoTextBox" HorizontalAlignment="Left" Text="{Binding costo}" FontSize="20" Margin="20,0" Height="50" Width="452" TextChanged="costoTextBox_TextChanged"  />
         </StackPanel>
 
-        <StackPanel  Orientation="Vertical"  HorizontalAlignment="Center" Width="550" Margin="0,484,0,204">
+        <StackPanel  Orientation="Vertical"  HorizontalAlignment="Left" Width="503" Margin="0,483,0,205">
             <Label  x:Name="valorinventariolabel" HorizontalAlignment="Left" FontSize="20" Content="Valor inventario" Width="220" Height="50" Margin="20,0"/>
-            <TextBox  x:Name="valorinventarioTextBox" HorizontalAlignment="Left" Text="{Binding valorInventario}" FontSize="20"  Height="50" Width="452" Margin="20,0" />
+            <TextBox  x:Name="valorinventarioTextBox" HorizontalAlignment="Left" Text="{Binding valorInventario}" FontSize="20"  Height="50" Width="452" Margin="20,0"   />
         </StackPanel>
 
-        <StackPanel HorizontalAlignment="Center" Margin="0,601,0,106" Orientation="Horizontal" Width="550" >
+        <StackPanel HorizontalAlignment="Center" Margin="0,601,0,106" Orientation="Horizontal" Width="450" >
             <Button x:Name="NuevoBoton" Content="Nuevo" Margin="5,0"  HorizontalAlignment="Center"   FontSize="20"  Width="119" Height="50" Click="NuevoBoton_Click" />
             <Button x:Name="GuardarBoton" Content="Guardar" Margin="5,0" HorizontalAlignment="Center"  FontSize="20"  Width="128" Height="50" />
             <Button x:Name="EliminarBoton" Content="Eliminar" Margin="5,0"  HorizontalAlignment="Center" FontSize="20"  Width="128" Height="50"/>
-            <Button x:Name="ValidarBoton" Content="Validar" Margin="5,0"  HorizontalAlignment="Center" FontSize="20"  Width="128" Height="50" Click="ValidarBoton_Click"/>
+
 
         </StackPanel>
 
