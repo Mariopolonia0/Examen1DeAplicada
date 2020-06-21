@@ -19,7 +19,7 @@
             <Button  Width="117" Height="50">
                 <StackPanel Orientation="Horizontal" Margin="5,0">
                     <Image Source="Resources\agregar.png" Width="33" Height="44" />
-                    <Label Content="Buscar"  />
+                    <Label Content="Buscar" FontSize="20"  />
                 </StackPanel>
             </Button>
 
@@ -47,10 +47,8 @@
 
         <StackPanel HorizontalAlignment="Center" Margin="0,601,0,106" Orientation="Horizontal" Width="450" >
             <Button x:Name="NuevoBoton" Content="Nuevo" Margin="5,0"  HorizontalAlignment="Center"   FontSize="20"  Width="119" Height="50" Click="NuevoBoton_Click" />
-            <Button x:Name="GuardarBoton" Content="Guardar" Margin="5,0" HorizontalAlignment="Center"  FontSize="20"  Width="128" Height="50" />
-            <Button x:Name="EliminarBoton" Content="Eliminar" Margin="5,0"  HorizontalAlignment="Center" FontSize="20"  Width="128" Height="50"/>
-
-
+            <Button x:Name="GuardarBoton" Content="Guardar" Margin="5,0" HorizontalAlignment="Center"  FontSize="20"  Width="128" Height="50" Click="GuardarBoton_Click" />
+            <Button x:Name="EliminarBoton" Content="Eliminar" Margin="5,0"  HorizontalAlignment="Center" FontSize="20"  Width="128" Height="50" Click="EliminarBoton_Click"/>
         </StackPanel>
 
 

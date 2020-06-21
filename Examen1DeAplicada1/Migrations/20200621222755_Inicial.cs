@@ -2,7 +2,7 @@
 
 namespace Examen1DeAplicada1.Migrations
 {
-    public partial class Migracion_Inicial : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

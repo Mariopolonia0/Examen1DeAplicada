@@ -8,12 +8,10 @@ namespace Examen1DeAplicada1.DAL
 {
     public class Contexto :DbContext
     {
-        public DbSet <Articulos> Articulos { get; set;  }
+        public DbSet <Articulos> Articulos { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source=Data\Examen1BD.db");
-        }
-
-        
+            optionsBuilder.UseSqlite(@"Data Source=Data\BDExamen1.db");
+        }        
     }
 }

@@ -19,25 +19,28 @@ namespace Examen1DeAplicada1.UI
     /// </summary>
     public partial class rRegistro : Window
     {
-        private Articulos articulo = new Articulos();
+        public Articulos articulo = new Articulos();
         public rRegistro()
         {
             InitializeComponent();
-            this.DataContext = articulo;
-            articulo.existencia = 0;
-            articulo.costo = 0;
-            
+            this.DataContext = articulo;   
         }
 
         private void NuevoBoton_Click(object sender, RoutedEventArgs e)
         {
-            this.articulo = new Articulos();
-            this.DataContext = articulo;
+            limpiar();
         }
 
-        private bool validar()
+        public void limpiar()
         {
-            if (productoIdTextBox.Text.Length == 0  )
+            this.articulo = new Articulos();
+            this.DataContext = articulo;
+            
+            
+        }
+        public bool validar()
+        {
+            if (Convert.ToInt32(productoIdTextBox.Text) == 0  )
             {
                 MessageBox.Show("El Campo Articulo ID Esta Vacio O Tiene Numero", "Error Campo Incompleto");
                 return  false;
@@ -47,17 +50,17 @@ namespace Examen1DeAplicada1.UI
                 MessageBox.Show("El Campo Descripcion Esta vacio", "Error Campo Incompleto");
                 return  false;
             }
-            else if (existenciaTextBox.Text.Length == 0)
+            else if (Convert.ToInt32(existenciaTextBox.Text) == 0)
             {
                 MessageBox.Show("El Campo Existencia Esta vacio", "Error Campo Incompleto");
                 return  false;
             }
-            else if (costoTextBox.Text.Length == 0)
+            else if (Convert.ToInt32(costoTextBox.Text) == 0)
             {
                 MessageBox.Show("El Campo Costo Esta vacio", "Error Campo Incompleto");
                 return  false;
             }
-
+            articulo.valorInventario = rArticulos.Inventario(articulo);
             return  true;
         }
   
@@ -72,6 +75,40 @@ namespace Examen1DeAplicada1.UI
         private void costoTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             valorinventarioTextBox.Text = rArticulos.Inventario(articulo).ToString();
+        }
+
+        private void GuardarBoton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!validar())
+                return;
+            articulo.valorInventario = rArticulos.Inventario(articulo);
+            var paso = rArticulos.Guardar(articulo) ;
+
+            if (paso)
+            {
+                valorinventarioTextBox.Text = rArticulos.Inventario(articulo).ToString();
+                MessageBox.Show("Transaccione exitosa!", "Exito",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+                MessageBox.Show("Transaccion Fallida", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+
+
+        }
+
+        private void EliminarBoton_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (rArticulos.Eliminar(Convert.ToInt32(productoIdTextBox.Text)))
+            {
+                limpiar();
+                MessageBox.Show("Registro eliminado!", "Exito",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+                MessageBox.Show("No fue posible eliminar", "Fallo");
+           
         }
     }
 }
