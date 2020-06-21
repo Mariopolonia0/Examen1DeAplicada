@@ -6,31 +6,35 @@
         xmlns:local="clr-namespace:Examen1DeAplicada1"
         mc:Ignorable="d"
    
-        Title="Regsitro" Height="500" Width="500" >
+        Title="Sistema De Registro" Height="500" Width="500" >
     <Grid Height="500" Width="500">
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,454" Width="500" >
-            
+
             <Button x:Name="ventana"  Margin="10,0" Click="ventana_Click" Width="146">
                 <StackPanel Orientation="Horizontal" >
-                    <Image Source="Resources\agregar.png" />
-                    <Label Content="Registro" />
+                    <Image  x:Name="botonregistro" Source="Resources\add.png" />
+                    <Label Name="registroboton" Content="Registro" FontSize="15" />
                 </StackPanel>
             </Button>
 
             <Button x:Name="Informacion"  Margin="0,0"  Width="145" Click="Informacion_Click">
                 <StackPanel Orientation="Horizontal" Margin="5,0">
-                    <Image Source="Resources\agregar.png" />
-                    <Label Content="Informacion" />
+                    <Image x:Name="botoninfo" Source="Resources\add.png" />
+                    <Label Content="Informacion" FontSize="15" />
                 </StackPanel>
             </Button>
 
         </StackPanel>
 
-        <StackPanel Margin="0,247,0,89">
-
-            <Label Margin="0,0" FontSize="25" HorizontalAlignment="Center" Content="Bienvenido a Su Sistema De Registro" FontStyle="Oblique" ></Label>
-
+        <StackPanel Margin="0,108,0,322">
+            <Label Name="bienvenia" Margin="0,0" FontSize="25" HorizontalAlignment="Center" Content="Bienvenido a Su Sistema De Registro" FontStyle="Oblique" Width="432" ></Label>
         </StackPanel>
+        <Image x:Name="entrada" Source="Resources\bien.png" Margin="72,178,72,109"  />
+        <StackPanel  Orientation="Vertical" Margin="144,410,8,29" >
+            <Label x:Name="promocion0" Content="Solucion Polonia" HorizontalAlignment="Right" Width="104" />
+            <Label x:Name="promocion1" Content="Donde Esta La Solucion A Tu Error Informatico "   HorizontalAlignment="Right" Margin="0,0" Width="261" />
+        </StackPanel>
+
     </Grid>
 </Window>

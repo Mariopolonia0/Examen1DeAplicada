@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Examen1DeAplicada1.UI"
         mc:Ignorable="d"
-        Title="Informacion Del Sistema" Height="450" Width="800">
+        Title="Informacion Del Sistema" Height="454" Width="800">
     <Grid>
-        <Label Margin="10,100,10,227" FontSize="50" Content="Creado Por Mario Peña"></Label>
+        <StackPanel Orientation="Vertical" Height="450" Margin="0,0,262,-12" >
+            <Label  FontSize="50" Content="Creado Por Mario Peña" Width="514"  />
+            <Label Margin="10,0"  Content="Creado El 15 De Junio Del 2020" FontSize="20"  />
+
+            <Label Margin="10,0"  Content="Edicion 0.2" FontSize="20"  />
+            <Label Margin="10,0"  Content="Creado Para Aplicada1" FontSize="20" />
+
+        </StackPanel>
+        <Image Source="\Resources\descarga.jpg" Width="448" Margin="342,192,10,5" />
     </Grid>
 </Window>
